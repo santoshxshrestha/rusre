@@ -74,8 +74,8 @@ async fn health() -> Result<impl Responder> {
 async fn main() -> std::io::Result<()> {
     env_logger::init();
 
-    println!("🚀 Quotes API starting on http://localhost:8080");
-    println!("📝 Endpoints:");
+    println!(" Quotes API starting on http://localhost:8080");
+    println!(" Endpoints:");
     println!("   GET /health");
     println!("   GET /api/quotes");
     println!("   GET /api/quotes/random");
