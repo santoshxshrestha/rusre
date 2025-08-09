@@ -6,7 +6,7 @@ import './App.css'
 
   useEffect(()=>{
     async function fetchData(){
-      const response = await fetch('/api/json', {method: 'POST'});
+      const response = await fetch('/api/random', {method: 'POST'});
       const json = await response.json();
       setData(json);
     };
@@ -15,13 +15,10 @@ import './App.css'
   },[]);
   return (
     <div>
-    <h1>
-    calling the rust api
-    </h1>
     {data ? (
       <>
-      <p>Name: {data.name}</p>
-      <p>Messge: {data.message}</p>
+      <h1> {data.text}</h1>
+      <p> {data.author}</p>
       </>
     ):(
       <p> loading ... </p>
