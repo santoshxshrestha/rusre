@@ -1,5 +1,6 @@
 #![allow(non_snake_case)]
-use actix_web::{self, HttpResponse, HttpServer, post};
+use actix_cors::Cors;
+use actix_web::{self, HttpResponse, HttpServer, http::header, post};
 use actix_web::{App, Responder};
 use actix_web::{get, web};
 use rand::prelude::IndexedRandom;
@@ -41,6 +42,17 @@ async fn main() -> Result<(), std::io::Error> {
 
     HttpServer::new(move || {
         App::new()
+            .wrap(
+                Cors::default()
+                    .allowed_origin("https://rusre-git-main-santoshxshresthas-projects.vercel.app/")
+                    .allowed_methods(vec!["GET", "POST", "PUT", "DELETE"])
+                    .allowed_headers(vec![
+                        header::AUTHORIZATION,
+                        header::ACCEPT,
+                        header::CONTENT_TYPE,
+                    ])
+                    .max_age(3600),
+            )
             .app_data(web::Data::new(shared_quotes.clone()))
             .service(random)
             .service(hello)
