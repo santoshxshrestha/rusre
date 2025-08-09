@@ -1,11 +1,12 @@
 #![allow(non_snake_case)]
 #![allow(unused)]
+use actix_files::Files;
 use actix_web::post;
 use actix_web::{HttpMessage, HttpResponse, HttpResponseBuilder, web};
 use askama::Template;
 use rand::{self, seq::IndexedRandom};
 use serde::{Deserialize, Serialize};
-use std::{fs, io, sync::Arc};
+use std::{io, sync::Arc};
 
 use actix_web::{self, App, HttpServer, Responder, get};
 
@@ -43,7 +44,7 @@ pub async fn random(quotes: web::Data<Quotes>) -> impl Responder {
 
 #[actix_web::main]
 async fn main() -> Result<(), std::io::Error> {
-    let data = fs::read_to_string("data/quotes.json").expect("failed to read the quotes file");
+    let data = std::fs::read_to_string("data/quotes.json").expect("failed to read the quotes file");
     let quotes: Vec<Quote> = serde_json::from_str(&data).expect("failed to parse quote json");
     let shared_quotes = Arc::new(quotes);
     HttpServer::new(move || {
@@ -51,6 +52,7 @@ async fn main() -> Result<(), std::io::Error> {
             .service(random)
             .service(home)
             .app_data(shared_quotes.clone())
+            .service(Files::new("/static", "./static").show_files_listing())
     })
     .bind(("127.0.0.1", 8080))?
     .run()

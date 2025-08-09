@@ -7,6 +7,19 @@
   </head>
 
   <body>
-    this is the body of the template
+    <div class="container">
+      <div class="quote">here goes the quote</div>
+      <div class="author">here goes the writer name</div>
+    </div>
+    <button
+      class="next"
+      hx-get="/quote/random"
+      hx-target=".quote"
+      hx-swap="innerHTML"
+    >
+      next
+    </button>
+
+    <script src="../static/js/home.js"></script>
   </body>
 </html>
