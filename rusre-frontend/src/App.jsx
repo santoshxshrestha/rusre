@@ -12,8 +12,8 @@ function App() {
       setLoading(true);
             setError(null);
 
-            const API_BASE_URL = process.env.REACT_APP_API_URL || "";
 
+            const API_BASE_URL = import.meta.env.VITE_REACT_APP_API_URL || "";
             const response = await fetch(`${API_BASE_URL}/api/random`, { method: 'POST' });
 
             if (!response.ok) {
