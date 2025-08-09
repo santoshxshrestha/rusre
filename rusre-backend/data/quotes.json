@@ -58,5 +58,545 @@
     "text": "Life is what happens when you're busy making other plans.",
     "author": "John Lennon",
     "categories": ["life", "planning"]
+  },
+  {
+    "id": 11,
+    "text": "Success is not final; failure is not fatal: It is the courage to continue that counts.",
+    "author": "Winston Churchill",
+    "categories": ["inspirational", "life"]
+  },
+  {
+    "id": 12,
+    "text": "Happiness depends upon ourselves.",
+    "author": "Aristotle",
+    "categories": ["happiness", "philosophy"]
+  },
+  {
+    "id": 13,
+    "text": "The only limit to our realization of tomorrow is our doubts of today.",
+    "author": "Franklin D. Roosevelt",
+    "categories": ["inspirational", "future"]
+  },
+  {
+    "id": 14,
+    "text": "Do what you can, with what you have, where you are.",
+    "author": "Theodore Roosevelt",
+    "categories": ["inspirational", "action"]
+  },
+  {
+    "id": 15,
+    "text": "What lies behind us and what lies before us are tiny matters compared to what lies within us.",
+    "author": "Ralph Waldo Emerson",
+    "categories": ["inspirational", "self"]
+  },
+  {
+    "id": 16,
+    "text": "Believe you can and you're halfway there.",
+    "author": "Theodore Roosevelt",
+    "categories": ["motivational", "self"]
+  },
+  {
+    "id": 17,
+    "text": "It does not matter how slowly you go as long as you do not stop.",
+    "author": "Confucius",
+    "categories": ["motivational", "perseverance"]
+  },
+  {
+    "id": 18,
+    "text": "Dream big and dare to fail.",
+    "author": "Norman Vaughan",
+    "categories": ["inspirational", "dreams"]
+  },
+  {
+    "id": 19,
+    "text": "To live is the rarest thing in the world. Most people exist, that is all.",
+    "author": "Oscar Wilde",
+    "categories": ["life", "philosophy"]
+  },
+  {
+    "id": 20,
+    "text": "Everything you’ve ever wanted is on the other side of fear.",
+    "author": "George Addair",
+    "categories": ["motivational", "fear"]
+  },
+  {
+    "id": 21,
+    "text": "Success usually comes to those who are too busy to be looking for it.",
+    "author": "Henry David Thoreau",
+    "categories": ["success", "work"]
+  },
+  {
+    "id": 22,
+    "text": "The purpose of our lives is to be happy.",
+    "author": "Dalai Lama",
+    "categories": ["life", "happiness"]
+  },
+  {
+    "id": 23,
+    "text": "The best way to predict the future is to create it.",
+    "author": "Peter Drucker",
+    "categories": ["future", "action"]
+  },
+  {
+    "id": 24,
+    "text": "You miss 100% of the shots you don’t take.",
+    "author": "Wayne Gretzky",
+    "categories": ["motivational", "action"]
+  },
+  {
+    "id": 25,
+    "text": "I have not failed. I've just found 10,000 ways that won't work.",
+    "author": "Thomas A. Edison",
+    "categories": ["failure", "perseverance"]
+  },
+  {
+    "id": 26,
+    "text": "In the middle of difficulty lies opportunity.",
+    "author": "Albert Einstein",
+    "categories": ["inspirational", "opportunity"]
+  },
+  {
+    "id": 27,
+    "text": "It always seems impossible until it's done.",
+    "author": "Nelson Mandela",
+    "categories": ["motivational", "perseverance"]
+  },
+  {
+    "id": 28,
+    "text": "Act as if what you do makes a difference. It does.",
+    "author": "William James",
+    "categories": ["action", "inspirational"]
+  },
+  {
+    "id": 29,
+    "text": "What we think, we become.",
+    "author": "Buddha",
+    "categories": ["philosophy", "mindset"]
+  },
+  {
+    "id": 30,
+    "text": "The best revenge is massive success.",
+    "author": "Frank Sinatra",
+    "categories": ["success", "motivation"]
+  },
+  {
+    "id": 31,
+    "text": "Opportunities don't happen. You create them.",
+    "author": "Chris Grosser",
+    "categories": ["opportunity", "action"]
+  },
+  {
+    "id": 32,
+    "text": "Don’t watch the clock; do what it does. Keep going.",
+    "author": "Sam Levenson",
+    "categories": ["motivation", "time"]
+  },
+  {
+    "id": 33,
+    "text": "Try not to become a man of success, but rather try to become a man of value.",
+    "author": "Albert Einstein",
+    "categories": ["success", "values"]
+  },
+  {
+    "id": 34,
+    "text": "The future belongs to those who believe in the beauty of their dreams.",
+    "author": "Eleanor Roosevelt",
+    "categories": ["future", "dreams"]
+  },
+  {
+    "id": 35,
+    "text": "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
+    "author": "Ralph Waldo Emerson",
+    "categories": ["self", "philosophy"]
+  },
+  {
+    "id": 36,
+    "text": "If opportunity doesn’t knock, build a door.",
+    "author": "Milton Berle",
+    "categories": ["opportunity", "action"]
+  },
+  {
+    "id": 37,
+    "text": "Success is walking from failure to failure with no loss of enthusiasm.",
+    "author": "Winston Churchill",
+    "categories": ["success", "perseverance"]
+  },
+  {
+    "id": 38,
+    "text": "The only person you are destined to become is the person you decide to be.",
+    "author": "Ralph Waldo Emerson",
+    "categories": ["self", "motivation"]
+  },
+  {
+    "id": 39,
+    "text": "Happiness is not something ready made. It comes from your own actions.",
+    "author": "Dalai Lama",
+    "categories": ["happiness", "action"]
+  },
+  {
+    "id": 40,
+    "text": "Don’t wait. The time will never be just right.",
+    "author": "Napoleon Hill",
+    "categories": ["motivation", "action"]
+  },
+  {
+    "id": 41,
+    "text": "You can never cross the ocean until you have the courage to lose sight of the shore.",
+    "author": "Christopher Columbus",
+    "categories": ["courage", "adventure"]
+  },
+  {
+    "id": 42,
+    "text": "Great minds discuss ideas; average minds discuss events; small minds discuss people.",
+    "author": "Eleanor Roosevelt",
+    "categories": ["philosophy", "mindset"]
+  },
+  {
+    "id": 43,
+    "text": "Life is 10% what happens to us and 90% how we react to it.",
+    "author": "Charles R. Swindoll",
+    "categories": ["life", "mindset"]
+  },
+  {
+    "id": 44,
+    "text": "The harder I work, the luckier I get.",
+    "author": "Gary Player",
+    "categories": ["work", "success"]
+  },
+  {
+    "id": 45,
+    "text": "It is never too late to be what you might have been.",
+    "author": "George Eliot",
+    "categories": ["motivation", "self"]
+  },
+  {
+    "id": 46,
+    "text": "Don’t limit your challenges. Challenge your limits.",
+    "author": "Anonymous",
+    "categories": ["motivation", "challenge"]
+  },
+  {
+    "id": 47,
+    "text": "You don’t have to be great to start, but you have to start to be great.",
+    "author": "Zig Ziglar",
+    "categories": ["motivation", "action"]
+  },
+  {
+    "id": 48,
+    "text": "Turn your wounds into wisdom.",
+    "author": "Oprah Winfrey",
+    "categories": ["wisdom", "life"]
+  },
+  {
+    "id": 49,
+    "text": "If you want to lift yourself up, lift up someone else.",
+    "author": "Booker T. Washington",
+    "categories": ["inspirational", "helping"]
+  },
+  {
+    "id": 50,
+    "text": "Success is not in what you have, but who you are.",
+    "author": "Bo Bennett",
+    "categories": ["success", "self"]
+  },
+  {
+    "id": 51,
+    "text": "Everything has beauty, but not everyone sees it.",
+    "author": "Confucius",
+    "categories": ["beauty", "philosophy"]
+  },
+  {
+    "id": 52,
+    "text": "Do what is right, not what is easy nor what is popular.",
+    "author": "Roy T. Bennett",
+    "categories": ["morality", "courage"]
+  },
+  {
+    "id": 53,
+    "text": "In every walk with nature one receives far more than he seeks.",
+    "author": "John Muir",
+    "categories": ["nature", "inspirational"]
+  },
+  {
+    "id": 54,
+    "text": "A goal without a plan is just a wish.",
+    "author": "Antoine de Saint-Exupéry",
+    "categories": ["goals", "planning"]
+  },
+  {
+    "id": 55,
+    "text": "Success is how high you bounce when you hit bottom.",
+    "author": "George S. Patton",
+    "categories": ["success", "perseverance"]
+  },
+  {
+    "id": 56,
+    "text": "You don’t find the happy life. You make it.",
+    "author": "Camilla Eyring Kimball",
+    "categories": ["happiness", "life"]
+  },
+  {
+    "id": 57,
+    "text": "The best dreams happen when you're awake.",
+    "author": "Cherie Gilderbloom",
+    "categories": ["dreams", "inspirational"]
+  },
+  {
+    "id": 58,
+    "text": "Don’t be pushed around by the fears in your mind. Be led by the dreams in your heart.",
+    "author": "Roy T. Bennett",
+    "categories": ["fear", "dreams"]
+  },
+  {
+    "id": 59,
+    "text": "Do one thing every day that scares you.",
+    "author": "Eleanor Roosevelt",
+    "categories": ["courage", "motivation"]
+  },
+  {
+    "id": 60,
+    "text": "The secret of getting ahead is getting started.",
+    "author": "Mark Twain",
+    "categories": ["action", "motivation"]
+  },
+  {
+    "id": 61,
+    "text": "Don’t count the days, make the days count.",
+    "author": "Muhammad Ali",
+    "categories": ["motivation", "time"]
+  },
+  {
+    "id": 62,
+    "text": "Everything you can imagine is real.",
+    "author": "Pablo Picasso",
+    "categories": ["imagination", "creativity"]
+  },
+  {
+    "id": 63,
+    "text": "Believe in yourself and all that you are.",
+    "author": "Christian D. Larson",
+    "categories": ["self", "motivation"]
+  },
+  {
+    "id": 64,
+    "text": "Be the change that you wish to see in the world.",
+    "author": "Mahatma Gandhi",
+    "categories": ["change", "inspirational"]
+  },
+  {
+    "id": 65,
+    "text": "What you get by achieving your goals is not as important as what you become by achieving your goals.",
+    "author": "Zig Ziglar",
+    "categories": ["goals", "self"]
+  },
+  {
+    "id": 66,
+    "text": "Strive not to be a success, but rather to be of value.",
+    "author": "Albert Einstein",
+    "categories": ["success", "values"]
+  },
+  {
+    "id": 67,
+    "text": "The mind is everything. What you think you become.",
+    "author": "Buddha",
+    "categories": ["mindset", "philosophy"]
+  },
+  {
+    "id": 68,
+    "text": "The best way out is always through.",
+    "author": "Robert Frost",
+    "categories": ["perseverance", "motivational"]
+  },
+  {
+    "id": 69,
+    "text": "Keep your face always toward the sunshine—and shadows will fall behind you.",
+    "author": "Walt Whitman",
+    "categories": ["positivity", "life"]
+  },
+  {
+    "id": 70,
+    "text": "You are never too old to set another goal or to dream a new dream.",
+    "author": "C.S. Lewis",
+    "categories": ["goals", "dreams"]
+  },
+  {
+    "id": 71,
+    "text": "The journey of a thousand miles begins with one step.",
+    "author": "Lao Tzu",
+    "categories": ["journey", "motivation"]
+  },
+  {
+    "id": 72,
+    "text": "If you want to live a happy life, tie it to a goal, not to people or things.",
+    "author": "Albert Einstein",
+    "categories": ["happiness", "goals"]
+  },
+  {
+    "id": 73,
+    "text": "The harder the conflict, the greater the triumph.",
+    "author": "George Washington",
+    "categories": ["conflict", "success"]
+  },
+  {
+    "id": 74,
+    "text": "Life isn’t about waiting for the storm to pass, it’s about learning to dance in the rain.",
+    "author": "Vivian Greene",
+    "categories": ["life", "resilience"]
+  },
+  {
+    "id": 75,
+    "text": "The best revenge is massive success.",
+    "author": "Frank Sinatra",
+    "categories": ["success", "motivation"]
+  },
+  {
+    "id": 76,
+    "text": "You don’t have to see the whole staircase, just take the first step.",
+    "author": "Martin Luther King Jr.",
+    "categories": ["motivation", "action"]
+  },
+  {
+    "id": 77,
+    "text": "Turn your wounds into wisdom.",
+    "author": "Oprah Winfrey",
+    "categories": ["wisdom", "life"]
+  },
+  {
+    "id": 78,
+    "text": "Success is liking yourself, liking what you do, and liking how you do it.",
+    "author": "Maya Angelou",
+    "categories": ["success", "self"]
+  },
+  {
+    "id": 79,
+    "text": "The only way to achieve the impossible is to believe it is possible.",
+    "author": "Charles Kingsleigh",
+    "categories": ["impossible", "belief"]
+  },
+  {
+    "id": 80,
+    "text": "A person who never made a mistake never tried anything new.",
+    "author": "Albert Einstein",
+    "categories": ["failure", "innovation"]
+  },
+  {
+    "id": 81,
+    "text": "Don’t let yesterday take up too much of today.",
+    "author": "Will Rogers",
+    "categories": ["time", "life"]
+  },
+  {
+    "id": 82,
+    "text": "If you’re going through hell, keep going.",
+    "author": "Winston Churchill",
+    "categories": ["perseverance", "motivation"]
+  },
+  {
+    "id": 83,
+    "text": "You are braver than you believe, stronger than you seem, and smarter than you think.",
+    "author": "A.A. Milne",
+    "categories": ["self", "motivation"]
+  },
+  {
+    "id": 84,
+    "text": "The only journey is the one within.",
+    "author": "Rainer Maria Rilke",
+    "categories": ["journey", "self"]
+  },
+  {
+    "id": 85,
+    "text": "Believe in the possibility of what you plan to do.",
+    "author": "Unknown",
+    "categories": ["belief", "planning"]
+  },
+  {
+    "id": 86,
+    "text": "The greatest wealth is to live content with little.",
+    "author": "Plato",
+    "categories": ["wealth", "contentment"]
+  },
+  {
+    "id": 87,
+    "text": "Success is not just about making money. It’s about making a difference.",
+    "author": "Unknown",
+    "categories": ["success", "impact"]
+  },
+  {
+    "id": 88,
+    "text": "Learning never exhausts the mind.",
+    "author": "Leonardo da Vinci",
+    "categories": ["learning", "mind"]
+  },
+  {
+    "id": 89,
+    "text": "Motivation is what gets you started. Habit is what keeps you going.",
+    "author": "Jim Ryun",
+    "categories": ["motivation", "habit"]
+  },
+  {
+    "id": 90,
+    "text": "If you want to fly, give up everything that weighs you down.",
+    "author": "Buddha",
+    "categories": ["freedom", "letting go"]
+  },
+  {
+    "id": 91,
+    "text": "Great things never come from comfort zones.",
+    "author": "Unknown",
+    "categories": ["growth", "challenge"]
+  },
+  {
+    "id": 92,
+    "text": "Don’t let small minds convince you that your dreams are too big.",
+    "author": "Unknown",
+    "categories": ["dreams", "motivation"]
+  },
+  {
+    "id": 93,
+    "text": "You are what you do, not what you say you’ll do.",
+    "author": "Carl Jung",
+    "categories": ["action", "self"]
+  },
+  {
+    "id": 94,
+    "text": "Great minds have purposes; others have wishes.",
+    "author": "Washington Irving",
+    "categories": ["purpose", "mindset"]
+  },
+  {
+    "id": 95,
+    "text": "Never bend your head. Always hold it high.",
+    "author": "Helen Keller",
+    "categories": ["confidence", "motivation"]
+  },
+  {
+    "id": 96,
+    "text": "The way to get started is to quit talking and begin doing.",
+    "author": "Walt Disney",
+    "categories": ["action", "motivation"]
+  },
+  {
+    "id": 97,
+    "text": "You don’t need to see the whole path, just take the first step.",
+    "author": "Unknown",
+    "categories": ["journey", "motivation"]
+  },
+  {
+    "id": 98,
+    "text": "Believe deep down in your heart that you’re destined to do great things.",
+    "author": "Joe Paterno",
+    "categories": ["belief", "motivation"]
+  },
+  {
+    "id": 99,
+    "text": "Don’t let the fear of losing be greater than the excitement of winning.",
+    "author": "Robert Kiyosaki",
+    "categories": ["fear", "motivation"]
+  },
+  {
+    "id": 100,
+    "text": "Your time is limited, don’t waste it living someone else’s life.",
+    "author": "Steve Jobs",
+    "categories": ["life", "inspirational"]
   }
 ]
