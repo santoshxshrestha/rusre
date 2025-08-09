@@ -1,5 +1,6 @@
 #![allow(non_snake_case)]
 #![allow(unused)]
+use actix_web::post;
 use actix_web::{HttpMessage, HttpResponse, HttpResponseBuilder, web};
 use askama::Template;
 use rand::{self, seq::IndexedRandom};
@@ -12,6 +13,7 @@ use actix_web::{self, App, HttpServer, Responder, get};
 #[template(path = "home.html")]
 pub struct Home;
 
+#[get("/")]
 pub async fn home() -> impl Responder {
     let template = Home;
     HttpResponse::Ok()
@@ -44,8 +46,13 @@ async fn main() -> Result<(), std::io::Error> {
     let data = fs::read_to_string("data/quotes.json").expect("failed to read the quotes file");
     let quotes: Vec<Quote> = serde_json::from_str(&data).expect("failed to parse quote json");
     let shared_quotes = Arc::new(quotes);
-    HttpServer::new(move || App::new().service(random).app_data(shared_quotes.clone()))
-        .bind(("0.0.0.0", 8080))?
-        .run()
-        .await
+    HttpServer::new(move || {
+        App::new()
+            .service(random)
+            .service(home)
+            .app_data(shared_quotes.clone())
+    })
+    .bind(("127.0.0.1", 8080))?
+    .run()
+    .await
 }
