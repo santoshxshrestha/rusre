@@ -10,10 +10,13 @@ function App() {
   const fetchQuote = async () => {
     try {
       setLoading(true);
-      setError(null);
-      const response = await fetch('/api/random', { method: 'POST' });
-      
-      if (!response.ok) {
+            setError(null);
+
+            const API_BASE_URL = process.env.REACT_APP_API_URL || "";
+
+            const response = await fetch(`${API_BASE_URL}/api/random`, { method: 'POST' });
+
+            if (!response.ok) {
         throw new Error('Failed to fetch quote');
       }
       
