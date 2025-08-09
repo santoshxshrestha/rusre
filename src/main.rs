@@ -1,3 +1,39 @@
-fn main() {
-    println!("Hello, world!");
+#![allow(non_snake_case)]
+#![allow(unused)]
+use actix_web::{HttpMessage, HttpResponse, HttpResponseBuilder, web};
+use rand::{self, seq::IndexedRandom};
+use serde::{Deserialize, Serialize};
+use std::{fs, io, sync::Arc};
+
+use actix_web::{self, App, HttpServer, Responder, get};
+
+#[derive(Deserialize, Serialize)]
+pub struct Quote {
+    Quote: String,
+    Author: String,
+    Tags: Vec<String>,
+    Category: String,
+}
+
+type Quotes = Arc<Vec<Quote>>;
+
+#[get("/quote/random")]
+pub async fn random(quotes: web::Data<Quotes>) -> impl Responder {
+    let mut rng = rand::rng();
+    if let Some(quote) = quotes.as_ref().choose(&mut rng) {
+        HttpResponse::Ok().json(quote)
+    } else {
+        HttpResponse::NotFound().body("No quotes found")
+    }
+}
+
+#[actix_web::main]
+async fn main() -> Result<(), std::io::Error> {
+    let data = fs::read_to_string("data/quotes.json").expect("failed to read the quotes file");
+    let quotes: Vec<Quote> = serde_json::from_str(&data).expect("failed to parse quote json");
+    let shared_quotes = Arc::new(quotes);
+    HttpServer::new(move || App::new().service(random).app_data(shared_quotes.clone()))
+        .bind(("0.0.0.0", 8080))?
+        .run()
+        .await
 }
