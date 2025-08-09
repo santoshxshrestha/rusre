@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "text": "Be yourself; everyone else is already taken.",
+    "author": "Oscar Wilde",
+    "categories": ["inspirational", "self"]
+  },
+  {
+    "id": 2,
+    "text": "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.",
+    "author": "Albert Einstein",
+    "categories": ["science", "humor"]
+  },
+  {
+    "id": 3,
+    "text": "So many books, so little time.",
+    "author": "Frank Zappa",
+    "categories": ["books", "humor"]
+  },
+  {
+    "id": 4,
+    "text": "A room without books is like a body without a soul.",
+    "author": "Marcus Tullius Cicero",
+    "categories": ["books", "inspirational"]
+  },
+  {
+    "id": 5,
+    "text": "In the middle of every difficulty lies opportunity.",
+    "author": "Albert Einstein",
+    "categories": ["inspirational", "life"]
+  },
+  {
+    "id": 6,
+    "text": "If you tell the truth, you don't have to remember anything.",
+    "author": "Mark Twain",
+    "categories": ["truth", "life"]
+  },
+  {
+    "id": 7,
+    "text": "We accept the love we think we deserve.",
+    "author": "Stephen Chbosky",
+    "categories": ["love", "life"]
+  },
+  {
+    "id": 8,
+    "text": "Without music, life would be a mistake.",
+    "author": "Friedrich Nietzsche",
+    "categories": ["music", "life"]
+  },
+  {
+    "id": 9,
+    "text": "The only way to do great work is to love what you do.",
+    "author": "Steve Jobs",
+    "categories": ["work", "inspirational"]
+  },
+  {
+    "id": 10,
+    "text": "Life is what happens when you're busy making other plans.",
+    "author": "John Lennon",
+    "categories": ["life", "planning"]
+  }
+]
