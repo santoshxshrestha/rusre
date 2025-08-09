@@ -1,11 +1,23 @@
 #![allow(non_snake_case)]
 #![allow(unused)]
 use actix_web::{HttpMessage, HttpResponse, HttpResponseBuilder, web};
+use askama::Template;
 use rand::{self, seq::IndexedRandom};
 use serde::{Deserialize, Serialize};
 use std::{fs, io, sync::Arc};
 
 use actix_web::{self, App, HttpServer, Responder, get};
+
+#[derive(Template)]
+#[template(path = "home.html")]
+pub struct Home;
+
+pub async fn home() -> impl Responder {
+    let template = Home;
+    HttpResponse::Ok()
+        .content_type("text/html")
+        .body(template.render().unwrap())
+}
 
 #[derive(Deserialize, Serialize)]
 pub struct Quote {
