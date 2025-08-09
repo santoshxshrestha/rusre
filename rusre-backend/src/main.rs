@@ -1,3 +1,4 @@
+#![allow(non_snake_case)]
 use actix_web::{self, HttpResponse, HttpServer, post};
 use actix_web::{App, Responder};
 use actix_web::{get, web};
@@ -9,10 +10,10 @@ use std::sync::Arc;
 
 #[derive(Deserialize, Serialize)]
 pub struct Quote {
-    id: usize,
-    text: String,
-    author: String,
-    categories: Vec<String>,
+    Quote: String,
+    Author: String,
+    Tags: Vec<String>,
+    Category: String,
 }
 
 type Quotes = Arc<Vec<Quote>>;
