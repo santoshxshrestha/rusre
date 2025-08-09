@@ -44,7 +44,7 @@ async fn main() -> Result<(), std::io::Error> {
         App::new()
             .wrap(
                 Cors::default()
-                    .allowed_origin("https://rusre-quotes.vercel.app/")
+                    .allowed_origin("https://rusre-quotes.vercel.app")
                     .allowed_methods(vec!["GET", "POST", "PUT", "DELETE"])
                     .allowed_headers(vec![
                         header::AUTHORIZATION,
