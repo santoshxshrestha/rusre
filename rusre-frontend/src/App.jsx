@@ -74,7 +74,7 @@ function App() {
       </div>
       
       <footer className="footer">
-        <p>Quote Generator App</p>
+        <p>rusre</p>
       </footer>
     </div>
   );
