@@ -51,7 +51,7 @@ async fn main() -> Result<(), std::io::Error> {
         App::new()
             .service(random)
             .service(home)
-            .app_data(shared_quotes.clone())
+            .app_data(web::Data::new(shared_quotes.clone()))
             .service(Files::new("/static", "./static").show_files_listing())
     })
     .bind(("127.0.0.1", 8080))?
