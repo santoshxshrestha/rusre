@@ -54,7 +54,7 @@ async fn main() -> Result<(), std::io::Error> {
             .app_data(web::Data::new(shared_quotes.clone()))
             .service(Files::new("/static", "./static").show_files_listing())
     })
-    .bind(("127.0.0.1", 8080))?
+    .bind(("0.0.0.0", 8080))?
     .run()
     .await
 }
