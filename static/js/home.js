@@ -15,7 +15,7 @@ async function fatchRandomQuote() {
 }
 
 // run on button click
-nextButton[0].addEventListener("click", fatchRandomQuote());
+nextButton[0].addEventListener("click", fatchRandomQuote);
 
 // run once teh page loads he he
-window.addEventListener("load", fatchRandomQuote());
+window.addEventListener("load", fatchRandomQuote);
