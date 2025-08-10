@@ -5,7 +5,59 @@
     color: white;
 }
 
-body {
-    min-height: 100vh;
+body .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border: 2px solid whitesmoke;
+    border-radius: 1rem;
+    min-height: 99vh;
     width: auto;
+    overflow: hidden;
+    scrollbar-width: 0px;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2rem;
+}
+
+
+.quote {
+    font-size: 2rem;
+}
+
+.author {
+    font-size: 1rem;
+    text-align: right;
+    margin-right: 5rem;
+}
+
+.author::before {
+    content: "By: ";
+}
+
+@media (max-width: 600px) {
+
+    body .container {
+        padding-right: 1rem;
+        padding-right: 1rem;
+        border: 1px solid whitesmoke;
+    }
+
+    .container {
+        row-gap: 1rem;
+    }
+
+
+    .quote {
+        font-size: 1.5rem;
+    }
+
+    .author {
+        margin-right: 2rem;
+    }
+
 }
