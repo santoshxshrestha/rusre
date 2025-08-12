@@ -1,6 +1,7 @@
 #![allow(non_snake_case)]
 #![allow(unused)]
 use actix_files::Files;
+use actix_web::http::KeepAlive;
 use actix_web::post;
 use actix_web::{HttpMessage, HttpResponse, HttpResponseBuilder, web};
 use askama::Template;
@@ -54,6 +55,7 @@ async fn main() -> Result<(), std::io::Error> {
             .app_data(web::Data::new(shared_quotes.clone()))
             .service(Files::new("/static", "./static").show_files_listing())
     })
+    .keep_alive(KeepAlive::Os)
     .bind(("0.0.0.0", 8080))?
     .run()
     .await
