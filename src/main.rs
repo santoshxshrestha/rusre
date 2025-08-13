@@ -43,9 +43,20 @@ pub async fn random(quotes: web::Data<Quotes>) -> impl Responder {
     }
 }
 
+#[derive(Deserialize)]
+pub struct Search {
+    keyword: String,
+}
+
 #[get("/quote/search")]
-pub async fn search(quotes: web::Data<Quote>) -> impl Responder {
-    HttpResponse::NotFound().body("No quotes found")
+pub async fn search(query: web::Query<Search>) -> impl Responder {
+    if (query.keyword == "hello santosh") {
+        HttpResponse::Ok()
+            .content_type("text/html")
+            .body("hello there santosh how is going on")
+    } else {
+        HttpResponse::NotFound().body("message not found")
+    }
 }
 
 #[actix_web::main]
