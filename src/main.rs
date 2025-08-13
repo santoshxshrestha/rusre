@@ -43,6 +43,11 @@ pub async fn random(quotes: web::Data<Quotes>) -> impl Responder {
     }
 }
 
+#[get("/quote/search")]
+pub async fn search(quotes: web::Data<Quote>) -> impl Responder {
+    HttpResponse::NotFound().body("No quotes found")
+}
+
 #[actix_web::main]
 async fn main() -> Result<(), std::io::Error> {
     let data = std::fs::read_to_string("data/quotes.json").expect("failed to read the quotes file");

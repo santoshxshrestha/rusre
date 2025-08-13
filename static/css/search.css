@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+#search {
+    width: 100vw;
+}
