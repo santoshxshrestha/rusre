@@ -32,7 +32,7 @@ body>a {
 
 body>a:hover {
     color: white;
-    background: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, #000000 0%, #333333 50%, #000000 100%);
     transform: translateY(-2px) scale(1.1);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
@@ -41,16 +41,6 @@ body>a:active {
     transform: translateY(0) scale(1.05);
 }
 
-@media (max-width: 768px) {
-    body>a {
-        top: 1rem;
-        left: 1rem;
-        padding: 0.6rem;
-        width: 45px;
-        height: 45px;
-        font-size: 1.1rem;
-    }
-}
 
 .container {
     max-width: 800px;
@@ -77,19 +67,21 @@ body>a:active {
 }
 
 .search-container {
+
+
     position: relative;
     margin-bottom: 2rem;
 }
 
 #search {
+    color: white;
+    background-color: black;
     height: 20px;
     width: 100%;
     padding: 1.5rem 2rem 1.5rem 4rem;
     font-size: 1.1rem;
     border: 2px solid #333333;
     border-radius: 25px;
-    background: #ffffff;
-    color: #000000;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     outline: none;
@@ -98,6 +90,7 @@ body>a:active {
 #search:focus {
     transform: translateY(-2px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(135deg, #000000 0%, #333333 50%, #000000 100%);
     border-color: #666666;
 }
 
@@ -147,7 +140,7 @@ body>a:active {
 }
 
 .result-item {
-    background: #ffffff;
+    background: #282828;
     border: 1px solid #e0e0e0;
     margin-bottom: 1rem;
     border-radius: 15px;
@@ -162,7 +155,7 @@ body>a:active {
 .result-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-    border-color: #333333;
+    border-color: #e0e0e0;
 }
 
 @keyframes slideIn {
@@ -175,7 +168,7 @@ body>a:active {
 .quote-text {
     font-size: 1.2rem;
     line-height: 1.6;
-    color: #000000;
+    color: #e0e0e0;
     margin-bottom: 1rem;
     position: relative;
     padding-left: 2rem;
@@ -187,13 +180,15 @@ body>a:active {
     left: 0;
     top: -0.2rem;
     font-size: 3rem;
-    color: #666666;
+
+    color: white;
     opacity: 0.5;
     font-family: Georgia, serif;
 }
 
 .quote-author {
-    color: #333333;
+
+    color: white;
     font-weight: 600;
     font-size: 1rem;
     text-align: right;
@@ -263,5 +258,16 @@ body>a:active {
 
     to {
         opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    body>a {
+        top: 1rem;
+        left: 1rem;
+        padding: 0.6rem;
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
     }
 }
