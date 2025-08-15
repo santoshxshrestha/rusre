@@ -7,7 +7,6 @@ let searchTimeout;
 search.addEventListener("input", async (e) => {
   const keyword = e.target.value.trim();
 
-  // Clear previous timeout
   clearTimeout(searchTimeout);
 
   if (!keyword) {
@@ -16,7 +15,6 @@ search.addEventListener("input", async (e) => {
     return;
   }
 
-  // Show loading with slight delay to avoid flickering
   searchTimeout = setTimeout(async () => {
     loading.style.display = "block";
 
@@ -45,7 +43,7 @@ search.addEventListener("input", async (e) => {
       console.error("Error:", err);
       showNoResults("Something went wrong. Please try again.");
     }
-  }, 300); // 300ms delay before showing loading
+  }, 300);
 });
 
 function displayResults(results) {
@@ -74,12 +72,10 @@ function escapeHtml(text) {
   return div.innerHTML;
 }
 
-// Focus search input on page load
 window.addEventListener("load", () => {
   search.focus();
 });
 
-// Add keyboard shortcuts
 document.addEventListener("keydown", (e) => {
   if (e.ctrlKey && e.key === "k") {
     e.preventDefault();

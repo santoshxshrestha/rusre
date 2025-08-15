@@ -18,8 +18,6 @@ body>a {
     color: #cccccc;
     text-decoration: none;
     padding: 0.75rem;
-    border: 2px solid #333333;
-    border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
@@ -34,7 +32,6 @@ body>a {
 
 body>a:hover {
     color: white;
-    border-color: #666666;
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px) scale(1.1);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
@@ -85,6 +82,7 @@ body>a:active {
 }
 
 #search {
+    height: 20px;
     width: 100%;
     padding: 1.5rem 2rem 1.5rem 4rem;
     font-size: 1.1rem;
@@ -235,6 +233,7 @@ body>a:active {
     }
 
     #search {
+        height: 15px;
         padding: 1.2rem 1.5rem 1.2rem 3.5rem;
         font-size: 1rem;
     }
