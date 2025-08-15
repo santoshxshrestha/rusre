@@ -12,7 +12,7 @@ body {
     padding: 2rem 1rem;
 }
 
-body>a {
+body>div>a {
     position: absolute;
     top: 2rem;
     right: 2rem;
@@ -28,7 +28,7 @@ body>a {
     text-transform: lowercase;
 }
 
-body>a:hover {
+body>div>a:hover {
     color: white;
     border-color: #666666;
     background: rgba(255, 255, 255, 0.2);
