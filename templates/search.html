@@ -1,14 +1,31 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>rusre | search</title>
     <link rel="stylesheet" href="../static/css/search.css" />
-  </head>
+</head>
 
-  <body>
-    <input id="search" type="search" />
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>rusre</h1>
+            <p>Discover wisdom through words</p>
+        </div>
+
+        <div class="search-container">
+            <div class="search-icon">🔍</div>
+            <input id="search" type="search" placeholder="Search for quotes..." autocomplete="off" />
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+            </div>
+        </div>
+
+        <ul id="results"></ul>
+    </div>
     <script src="../static/js/search.js"></script>
-  </body>
+</body>
+
 </html>

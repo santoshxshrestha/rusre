@@ -44,18 +44,26 @@ pub async fn random(quotes: web::Data<Quotes>) -> impl Responder {
 }
 
 #[derive(Deserialize)]
-pub struct Search_quote {
+pub struct SearchQuote {
     keyword: String,
 }
 
 #[get("/quote/search")]
-pub async fn search_quote(query: web::Query<Search_quote>) -> impl Responder {
-    if (query.keyword == "hello santosh") {
-        HttpResponse::Ok()
-            .content_type("text/html")
-            .body("hello there santosh how is going on")
-    } else {
+pub async fn search_quote(
+    query: web::Query<SearchQuote>,
+    quotes: web::Data<Quotes>,
+) -> impl Responder {
+    let keyword = query.keyword.to_lowercase();
+
+    let results: Vec<&Quote> = quotes
+        .iter()
+        .filter(|q| q.Quote.to_lowercase().contains(&keyword))
+        .collect();
+
+    if results.is_empty() {
         HttpResponse::NotFound().body("message not found")
+    } else {
+        HttpResponse::Ok().json(serde_json::json!({ "results": results }))
     }
 }
 
@@ -82,6 +90,7 @@ async fn main() -> Result<(), std::io::Error> {
             .service(random)
             .service(home)
             .service(search)
+            .service(search_quote)
             .app_data(web::Data::new(shared_quotes.clone()))
             .service(Files::new("/static", "./static").show_files_listing())
     })
