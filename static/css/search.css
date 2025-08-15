@@ -1,3 +1,21 @@
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -125,15 +143,6 @@ body>a:active {
     animation: spin 1s linear infinite;
 }
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
 
 #results {
     list-style: none;
@@ -156,13 +165,6 @@ body>a:active {
     transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
     border-color: #e0e0e0;
-}
-
-@keyframes slideIn {
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
 }
 
 .quote-text {
