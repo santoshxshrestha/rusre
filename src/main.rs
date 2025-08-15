@@ -44,12 +44,12 @@ pub async fn random(quotes: web::Data<Quotes>) -> impl Responder {
 }
 
 #[derive(Deserialize)]
-pub struct Search {
+pub struct Search_quote {
     keyword: String,
 }
 
 #[get("/quote/search")]
-pub async fn search(query: web::Query<Search>) -> impl Responder {
+pub async fn search_quote(query: web::Query<Search_quote>) -> impl Responder {
     if (query.keyword == "hello santosh") {
         HttpResponse::Ok()
             .content_type("text/html")
@@ -57,6 +57,19 @@ pub async fn search(query: web::Query<Search>) -> impl Responder {
     } else {
         HttpResponse::NotFound().body("message not found")
     }
+}
+
+#[derive(Template)]
+#[template(path = "search.html")]
+pub struct Search;
+
+#[get("/search")]
+pub async fn search() -> impl Responder {
+    let template = Search;
+
+    HttpResponse::Ok()
+        .content_type("text/html")
+        .body(template.render().unwrap())
 }
 
 #[actix_web::main]
@@ -68,6 +81,7 @@ async fn main() -> Result<(), std::io::Error> {
         App::new()
             .service(random)
             .service(home)
+            .service(search)
             .app_data(web::Data::new(shared_quotes.clone()))
             .service(Files::new("/static", "./static").show_files_listing())
     })
