@@ -80,6 +80,17 @@ pub async fn search() -> impl Responder {
         .body(template.render().unwrap())
 }
 
+#[get("/catagory")]
+pub async fn catagories(quotes: web::Data<Quotes>) -> impl Responder {
+    let mut catagories = Vec::new();
+    for quote in quotes.iter() {
+        if !catagories.contains(&quote.Category) {
+            catagories.push(quote.Category.clone());
+        }
+    }
+    HttpResponse::Ok().json(serde_json::json!({ "catagories": catagories }))
+}
+
 #[actix_web::main]
 async fn main() -> Result<(), std::io::Error> {
     let data = std::fs::read_to_string("data/quotes.json").expect("failed to read the quotes file");
@@ -91,6 +102,7 @@ async fn main() -> Result<(), std::io::Error> {
             .service(home)
             .service(search)
             .service(search_quote)
+            .service(catagories)
             .app_data(web::Data::new(shared_quotes.clone()))
             .service(Files::new("/static", "./static").show_files_listing())
     })
