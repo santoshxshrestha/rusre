@@ -85,8 +85,6 @@ body>a:active {
 }
 
 .search-container {
-
-
     position: relative;
     margin-bottom: 2rem;
 }
@@ -119,11 +117,21 @@ body>a:active {
 .search-icon {
     position: absolute;
     left: 1.5rem;
-    top: 50%;
+    top: 53%;
     transform: translateY(-50%);
     color: #333333;
     font-size: 1.2rem;
     pointer-events: none;
+}
+
+.filter {
+    position: absolute;
+    top: 28%;
+    right: 3%;
+    color: #333333;
+    font-size: 1.2rem;
+    pointer-events: none;
+
 }
 
 .loading {
