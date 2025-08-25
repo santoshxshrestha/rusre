@@ -127,6 +127,10 @@ body>div>a:hover {
     animation: fadeInUp 0.8s ease 0.4s forwards;
 }
 
+button:focus {
+    outline: none;
+}
+
 .next {
     min-width: 200px;
     padding: 1rem 2rem;
