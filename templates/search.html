@@ -1,50 +1,61 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>rusre | search</title>
     <link rel="stylesheet" href="../static/css/search.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<body>
+  <body>
     <a href="/">
-        <i class="fa-solid fa-house"></i>
+      <i class="fa-solid fa-house"></i>
     </a>
     <div class="container">
-        <div class="header">
-            <h1>rusre</h1>
-            <p>Discover wisdom through words</p>
+      <div class="header">
+        <h1>rusre</h1>
+        <p>Discover wisdom through words</p>
+      </div>
+
+      <div class="search-container">
+        <div class="search-icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <input
+          id="search"
+          type="search"
+          placeholder="Search for quotes..."
+          autocomplete="off"
+        />
+        <div class="loading" id="loading">
+          <div class="spinner"></div>
         </div>
 
-        <div class="search-container">
-            <div class="search-icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-            <input id="search" type="search" placeholder="Search for quotes..." autocomplete="off" />
-            <div class="loading" id="loading">
-                <div class="spinner"></div>
-            </div>
-
-            <div class="filter">
-                <i class="fa-solid fa-filter"></i>
-                <select id="filter-options">
-                    <option value="">Loading...</option>
-                </select>
-            </div>
+        <div class="filter">
+          <i class="fa-solid fa-filter"></i>
+          <!-- <select id="filter-options"> -->
+          <!--   <option value="">Loading...</option> -->
+          <!-- </select> -->
         </div>
+      </div>
 
-        <ul id="results"></ul>
+      <ul id="results"></ul>
     </div>
     <script src="../static/js/search.js"></script>
-    <script src="../static/js/catagory.js"></script>
-</body>
-
+    <!-- <script src="../static/js/catagory.js"></script> -->
+  </body>
 </html>
