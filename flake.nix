@@ -18,12 +18,6 @@
           openssl
           rust-analyzer
           pkg-config
-
-          yarn
-          pnpm
-          # nodePackages.typescript
-          nodePackages.eslint
-          nodePackages.prettier
           nodePackages.typescript-language-server
         ];
 
