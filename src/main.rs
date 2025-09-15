@@ -1,13 +1,11 @@
 #![allow(non_snake_case)]
-#![allow(unused)]
 use actix_files::Files;
 use actix_web::http::KeepAlive;
-use actix_web::post;
-use actix_web::{HttpMessage, HttpResponse, HttpResponseBuilder, web};
+use actix_web::{HttpResponse, web};
 use askama::Template;
 use rand::{self, seq::IndexedRandom};
 use serde::{Deserialize, Serialize};
-use std::{io, sync::Arc};
+use std::sync::Arc;
 
 use actix_web::{self, App, HttpServer, Responder, get};
 
