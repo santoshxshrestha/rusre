@@ -1,16 +1,19 @@
 {
   description = "A Nix-flake-based actix-web development environment";
 
-  inputs = { nixpkgs.url = "github:NixOS/nixpkgs?ref=nixos-unstable"; };
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs?ref=nixos-unstable";
+  };
 
-  outputs = { self, nixpkgs }:
+  outputs =
+    { self, nixpkgs }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; };
-    in {
+    in
+    {
       devShells.${system}.default = pkgs.mkShell {
         buildInputs = with pkgs; [
-          nodejs
           rustc
           cargo
           clippy
@@ -18,11 +21,19 @@
           openssl
           rust-analyzer
           pkg-config
+          cargo-watch
+
+          nodejs
+          nodePackages.prettier
           nodePackages.typescript-language-server
+
+          wasm-pack
+          rocmPackages.llvm.lld
+          python3
         ];
 
         shellHook = ''
-          export RUST_SRC_PATH=${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}
+          # export RUST_SRC_PATH=${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}
         '';
       };
     };
