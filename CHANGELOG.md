@@ -10,27 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 ### Fixed
-
-## [0.2.0] - 2025-11-30
-
-### Added
-
-- wasm support for client-side rendering.
-- dependencies: `wasm-bindgen`, `wasm-pack`.
-- Formatter configuration
-- converted crate into library crate.
-- CI/CD pipeline using GitHub Actions.
-
-### Fixed
-
-- Refactored codebase for better modularity and maintainability .
-
-### Removed
-
-- webserver support.
-
 ---
-
 ## [0.1.0] - 2025-09-21
 
 ### Added
