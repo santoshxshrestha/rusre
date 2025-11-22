@@ -43,7 +43,8 @@ pub async fn random(quotes: web::Data<Quotes>) -> impl Responder {
 
 #[derive(Deserialize)]
 pub struct SearchQuote {
-    keyword: String,
+    keyword: Option<String>,
+    category: Option<String>,
 }
 
 #[get("/quote/search")]
@@ -51,11 +52,19 @@ pub async fn search_quote(
     query: web::Query<SearchQuote>,
     quotes: web::Data<Quotes>,
 ) -> impl Responder {
-    let keyword = query.keyword.to_lowercase();
+    let keyword = query.keyword.as_deref().unwrap_or("").to_lowercase();
+    let category_filter = query.category.as_ref().map(|c| c.to_lowercase());
 
     let results: Vec<&Quote> = quotes
         .iter()
-        .filter(|q| q.Quote.to_lowercase().contains(&keyword))
+        .filter(|q| {
+            let text_match = keyword.is_empty() || q.Quote.to_lowercase().contains(&keyword);
+            let category_match = match &category_filter {
+                Some(c) if !c.is_empty() => q.Category.to_lowercase() == *c,
+                _ => true,
+            };
+            text_match && category_match
+        })
         .collect();
 
     if results.is_empty() {

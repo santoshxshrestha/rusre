@@ -4,14 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>rusre | search</title>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" as="style" />
     <link rel="stylesheet" href="../static/css/search.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
@@ -22,40 +16,46 @@
   </head>
 
   <body>
-    <a href="/">
-      <i class="fa-solid fa-house"></i>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="home-link" href="/" aria-label="Back to home">
+      <i class="fa-solid fa-house" aria-hidden="true"></i>
+      <span class="home-text">Home</span>
     </a>
-    <div class="container">
-      <div class="header">
+    <main id="main" class="container" role="main">
+      <header class="header">
         <h1>rusre</h1>
         <p>Discover wisdom through words</p>
-      </div>
+      </header>
 
-      <div class="search-container">
-        <div class="search-icon">
+      <form class="search-container" role="search" aria-label="Quote search" onsubmit="return false;">
+        <label class="visually-hidden" for="search">Search for quotes</label>
+        <div class="search-icon" aria-hidden="true">
           <i class="fa-solid fa-magnifying-glass"></i>
         </div>
         <input
           id="search"
+          name="search"
           type="search"
           placeholder="Search for quotes..."
           autocomplete="off"
+          aria-controls="results"
+          aria-describedby="search-help"
         />
-        <div class="loading" id="loading">
-          <div class="spinner"></div>
+        <div id="search-help" class="visually-hidden">Type keywords to search quotes. Results update automatically.</div>
+        <div class="loading" id="loading" aria-hidden="true">
+          <div class="spinner" role="status" aria-label="Loading"></div>
         </div>
-
         <div class="filter">
-          <i class="fa-solid fa-filter"></i>
-          <!-- <select id="filter-options"> -->
-          <!--   <option value="">Loading...</option> -->
-          <!-- </select> -->
+          <label for="filter-options" class="visually-hidden">Filter by category</label>
+          <i class="fa-solid fa-filter" aria-hidden="true"></i>
+          <select id="filter-options" name="category" aria-label="Category filter">
+            <option value="">All Categories</option>
+          </select>
         </div>
-      </div>
+      </form>
 
-      <ul id="results"></ul>
-    </div>
-    <script src="../static/js/search.js"></script>
-    <!-- <script src="../static/js/catagory.js"></script> -->
+      <ul id="results" aria-live="polite" aria-label="Search results"></ul>
+    </main>
+    <script src="../static/js/search.js" defer></script>
   </body>
 </html>

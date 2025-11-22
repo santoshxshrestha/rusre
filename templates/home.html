@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>rusre</title>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" as="style" />
     <link rel="stylesheet" href="../static/css/home.css" />
     <link
       rel="stylesheet"
@@ -15,16 +16,30 @@
   </head>
 
   <body>
-    <div class="container">
-      <a href="/search"> <i class="fa-solid fa-magnifying-glass"></i> search</a>
-      <div class="quote">here goes the quote</div>
-      <div class="author">here goes the writer name</div>
-
-      <div class="button">
-        <button class="next">next</button>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <nav class="utility-nav" aria-label="Utility">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">✦</span>
+        <span class="name">rusre</span>
       </div>
-    </div>
+      <a href="/search" aria-label="Go to search page" class="nav-link">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> <span>Search</span>
+      </a>
+    </nav>
+    <main id="main" class="container" role="main">
+      <header class="hero">
+        <h1 class="title">Daily Wisdom</h1>
+        <p class="tagline">A random thought to spark your mind</p>
+      </header>
+      <div class="quote-block" aria-live="polite">
+        <blockquote class="quote" id="quote">here goes the quote</blockquote>
+        <footer class="author" id="author" aria-live="polite">here goes the writer name</footer>
+      </div>
+      <div class="actions">
+        <button class="next" id="next" type="button" aria-label="Get another random quote">Next Quote</button>
+      </div>
+    </main>
 
-    <script src="../static/js/home.js"></script>
+    <script src="../static/js/home.js" defer></script>
   </body>
 </html>
